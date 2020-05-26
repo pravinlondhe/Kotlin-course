@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kotlin Application</string>
+    <string name="sample_text">Hello World!</string>
+    <string name="hint_enter_text_here">Enter Text Here</string>
+    <string name="show">Show</string>
+    <string name="sample_msg_kt">Hey Kotlin</string>
+</resources>
