@@ -1,6 +1,5 @@
 package com.example.kotlinapplication.components
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -9,12 +8,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinapplication.R
 
-class UsersAdapter(val users: List<User>) : RecyclerView.Adapter<UsersAdapter.UsersViewHolder>() {
+class UsersAdapter(private val users: List<User>) : RecyclerView.Adapter<UsersAdapter.UsersViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        UsersViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_list_sample, parent, false)
-        )
+        UsersViewHolder(parent.inflate(R.layout.item_list_sample))
 
     override fun onBindViewHolder(holder: UsersViewHolder, position: Int) =
         holder.bind(users[position])
