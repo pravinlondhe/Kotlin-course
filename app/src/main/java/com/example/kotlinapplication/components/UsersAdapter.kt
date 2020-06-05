@@ -33,7 +33,7 @@ class UsersAdapter(private val users: List<User>) : RecyclerView.Adapter<UsersAd
 
         fun bind(user: User) {
 //            icon.setImageResource(user.icon)
-            icon.loadImageWithPicasso(user.url)
+            icon.loadImageWithPicasso(user.url, user.icon)
             name.text = user.name
             cardView.setOnClickListener { showToast(user.name) }
         }

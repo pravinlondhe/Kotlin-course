@@ -10,9 +10,11 @@ import com.squareup.picasso.Picasso
 
 data class User(val icon: Int, val name: String, val url: String)
 
-fun ImageView.loadImageWithPicasso(url: String) {
+//Exercise-7
+fun ImageView.loadImageWithPicasso(url: String, default: Int) {
     Picasso.get()
         .load(url)
+        .placeholder(default)
         .centerCrop()
         .resize(320, 320)
         .into(this)
