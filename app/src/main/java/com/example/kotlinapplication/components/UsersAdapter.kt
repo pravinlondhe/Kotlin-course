@@ -22,13 +22,13 @@ class UsersAdapter(private val users: List<User>) : RecyclerView.Adapter<UsersAd
 
     inner class UsersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val icon: ImageView by lazy {
-            view.findViewById<ImageView>(R.id.iv_list_icon)
+            view.find<ImageView>(R.id.iv_list_icon)
         }
         private val name: TextView by lazy {
-            view.findViewById<TextView>(R.id.tv_list_title)
+            view.find<TextView>(R.id.tv_list_title)
         }
         private val cardView by lazy {
-            view.findViewById<CardView>(R.id.cv_item)
+            view.find<CardView>(R.id.cv_item)
         }
 
         fun bind(user: User) {
