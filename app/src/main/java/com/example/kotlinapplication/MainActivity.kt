@@ -16,24 +16,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         showToast(getString(R.string.sample_msg_kt))
 
-        //Excercise -2
+        //Exercise -2
         val textView: TextView = findViewById(R.id.tv_test_text)
         textView.text = getString(R.string.sample_msg_kt)
 
-        //Excercise-3
+        //Exercise-3
         val button: Button = findViewById(R.id.bt_show)
         val input: EditText = findViewById(R.id.et_input)
         button.setOnClickListener {
             showToast("Hello ${input.text}")
         }
 
-        //Excercise-4
+        //Exercise-4
         val recyclerView: RecyclerView = findViewById(R.id.rv_users)
         recyclerView.adapter = UsersAdapter(getSampleUsers())
     }
 
-    //Excercise-1
-    fun showToast(msg: String) {
+    //Exercise-1
+    private fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }

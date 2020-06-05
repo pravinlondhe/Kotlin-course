@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinapplication.R
 
@@ -29,11 +30,15 @@ class UsersAdapter(val users: List<User>) : RecyclerView.Adapter<UsersAdapter.Us
         private val name: TextView by lazy {
             view.findViewById<TextView>(R.id.tv_list_title)
         }
+        private val cardView by lazy {
+            view.findViewById<CardView>(R.id.cv_item)
+        }
 
         fun bind(user: User) {
 //            icon.setImageResource(user.icon)
             icon.loadImageWithPicasso(user.url)
             name.text = user.name
+            cardView.setOnClickListener { showToast(user.name) }
         }
     }
 }
