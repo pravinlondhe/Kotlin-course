@@ -31,7 +31,8 @@ class UsersAdapter(val users: List<User>) : RecyclerView.Adapter<UsersAdapter.Us
         }
 
         fun bind(user: User) {
-            icon.setImageResource(user.icon)
+//            icon.setImageResource(user.icon)
+            icon.loadImageWithPicasso(user.url)
             name.text = user.name
         }
     }
